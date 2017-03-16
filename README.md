@@ -1,8 +1,9 @@
 # ZTEHostlessMonitor
 ## ZTE Hostless Modem Monitor Desktop Dashboard (Windows)
-=======
+
 ![screenshot](https://s10.postimg.org/pf5tpro7d/2017_03_06_211915.png)
-###Milestone
+
+### Milestone
 
 v.0
 * Modem parameter monitoring
@@ -18,4 +19,4 @@ v.2
 * USSD
 
 v.3
-* TBD
+* TBD (Maybe MiFi support?)
