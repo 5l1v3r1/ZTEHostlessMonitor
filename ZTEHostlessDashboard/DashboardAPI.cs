@@ -90,10 +90,15 @@ namespace ZTEHostlessDashboard
 
         private static void showError(string error_message)
         {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Error:\n");
+            sb.Append(error_message);
+
             MessageBox.Show(error_message, "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                     );
+            
         }
 
         public string ResponseStream2String(Stream s)

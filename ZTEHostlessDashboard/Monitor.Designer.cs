@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Monitor));
             this.label_dashboardAddr = new System.Windows.Forms.Label();
             this.tb_dashboardAddress = new System.Windows.Forms.TextBox();
             this.groupBox_Info = new System.Windows.Forms.GroupBox();
@@ -40,11 +41,13 @@
             this.tb_IMSI = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_IMEI = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tb_State = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tb_State = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker_AJAXFetch = new System.ComponentModel.BackgroundWorker();
             this.groupBox_Network = new System.Windows.Forms.GroupBox();
+            this.tb_Roam = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
             this.tb_ActiveBand = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tb_CellID = new System.Windows.Forms.TextBox();
@@ -115,8 +118,6 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusSpring = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel_Model = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tb_Roam = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
             this.groupBox_Info.SuspendLayout();
             this.groupBox_Network.SuspendLayout();
             this.groupBox_Signal.SuspendLayout();
@@ -243,14 +244,14 @@
             this.tb_IMEI.Size = new System.Drawing.Size(185, 20);
             this.tb_IMEI.TabIndex = 5;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "IMEI";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "State";
             // 
             // tb_State
             // 
@@ -261,14 +262,14 @@
             this.tb_State.Size = new System.Drawing.Size(185, 20);
             this.tb_State.TabIndex = 4;
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "State";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "IMEI";
             // 
             // backgroundWorker_AJAXFetch
             // 
@@ -306,6 +307,24 @@
             this.groupBox_Network.TabIndex = 10;
             this.groupBox_Network.TabStop = false;
             this.groupBox_Network.Text = "Network";
+            // 
+            // tb_Roam
+            // 
+            this.tb_Roam.CausesValidation = false;
+            this.tb_Roam.Location = new System.Drawing.Point(47, 71);
+            this.tb_Roam.Name = "tb_Roam";
+            this.tb_Roam.ReadOnly = true;
+            this.tb_Roam.Size = new System.Drawing.Size(92, 20);
+            this.tb_Roam.TabIndex = 15;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(6, 74);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(35, 13);
+            this.label42.TabIndex = 40;
+            this.label42.Text = "Roam";
             // 
             // tb_ActiveBand
             // 
@@ -995,29 +1014,12 @@
             this.toolStripStatusLabel_Model.Text = "Model";
             this.toolStripStatusLabel_Model.Visible = false;
             // 
-            // tb_Roam
-            // 
-            this.tb_Roam.CausesValidation = false;
-            this.tb_Roam.Location = new System.Drawing.Point(47, 71);
-            this.tb_Roam.Name = "tb_Roam";
-            this.tb_Roam.ReadOnly = true;
-            this.tb_Roam.Size = new System.Drawing.Size(92, 20);
-            this.tb_Roam.TabIndex = 15;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(6, 74);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(35, 13);
-            this.label42.TabIndex = 40;
-            this.label42.Text = "Roam";
-            // 
             // Monitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(564, 511);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.groupBox_Connection);
@@ -1028,7 +1030,9 @@
             this.Controls.Add(this.label_dashboardAddr);
             this.Controls.Add(this.btn_StartMonitor);
             this.Controls.Add(this.btn_StopMonitor);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Monitor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

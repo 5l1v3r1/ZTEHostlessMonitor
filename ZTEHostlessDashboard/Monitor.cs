@@ -67,8 +67,8 @@ namespace ZTEHostlessDashboard
             tb_FWVer.Text = o.wa_inner_version;
             tb_SWVer.Text = o.web_version;
             switchMonitorButtons();
-            backgroundWorker_AJAXFetch.RunWorkerAsync();
             toolStripStatusLabel.Text = "Connected";
+            backgroundWorker_AJAXFetch.RunWorkerAsync();
         }
 
         private void worker_StaticDeviceInfo_DoWork(object sender, DoWorkEventArgs e)
@@ -111,8 +111,8 @@ namespace ZTEHostlessDashboard
             tb_IPAddress.Text = o.wan_ipaddr;
             tb_DNS1.Text = o.prefer_dns_auto;
             tb_DNS2.Text = o.standby_dns_auto;
-            tb_TxRate.Text = Helpers.StrFormatNetSpeed((string)o.realtime_tx_thrpt);
-            tb_RxRate.Text = Helpers.StrFormatNetSpeed((string)o.realtime_rx_thrpt);
+            tb_TxRate.Text = Helpers.StrFormatNetSpeed(o.realtime_tx_thrpt.ToString());
+            tb_RxRate.Text = Helpers.StrFormatNetSpeed(o.realtime_rx_thrpt.ToString());
         }
 
         private void Monitor_FormClosing(object sender, FormClosingEventArgs e)
