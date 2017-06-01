@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MF831 Dashboard")]
-[assembly: AssemblyDescription("MF831 Desktop Dashboard")]
+[assembly: AssemblyTitle("ZTE Hostless Dashboard")]
+[assembly: AssemblyDescription("ZTE Hostless Modem Dashboard")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("rook13")]
-[assembly: AssemblyProduct("MF831 Dashboard")]
+[assembly: AssemblyProduct("ZTE Hostless Modem Dashboard")]
 [assembly: AssemblyCopyright("All Rights Reserved")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.*")]
-[assembly: AssemblyFileVersion("1.0.0")]
+[assembly: AssemblyVersion("0.1.*")]
+//[assembly: AssemblyFileVersion("1.0.*")]

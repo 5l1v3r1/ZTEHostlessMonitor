@@ -6,7 +6,19 @@
       <Value Profile="(Default)">192.168.0.1</Value>
     </Setting>
     <Setting Name="pooling_interval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="always_on_top" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cooldown_interval" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="operation_timeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="long_operation_timeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30000</Value>
     </Setting>
   </Settings>
 </SettingsFile>

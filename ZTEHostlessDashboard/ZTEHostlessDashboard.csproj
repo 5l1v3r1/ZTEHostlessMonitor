@@ -54,7 +54,7 @@
     <StartupObject>ZTEHostlessDashboard.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>app_w.ico</ApplicationIcon>
+    <ApplicationIcon>icons\app_w.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -73,7 +73,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashboardAPI.cs" />
+    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="ModemAPI\API_Base.cs" />
+    <Compile Include="ModemAPI\API_CDC.cs" />
+    <Compile Include="ModemAPI\API_InitialInformation.cs" />
+    <Compile Include="ModemAPI\API_ModemMonitor.cs" />
+    <Compile Include="ModemAPI\API_Get.cs" />
+    <Compile Include="ModemAPI\API_Error.cs" />
+    <Compile Include="ModemAPI\API_Post.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Monitor.cs">
       <SubType>Form</SubType>
@@ -102,7 +109,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -134,8 +143,33 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app_b.ico" />
-    <Content Include="app_w.ico" />
+    <Content Include="icons\app_b.ico" />
+    <Content Include="icons\app_w.ico" />
+    <Content Include="Resources\0.png" />
+    <Content Include="Resources\0_none.png" />
+    <Content Include="Resources\1.png" />
+    <Content Include="Resources\2.png" />
+    <Content Include="Resources\3.png" />
+    <Content Include="Resources\4.png" />
+    <Content Include="Resources\5.png" />
+    <Content Include="Resources\connect.gif" />
+    <Content Include="Resources\connect.png" />
+    <Content Include="Resources\connecting.gif" />
+    <Content Include="Resources\device.png" />
+    <Content Include="Resources\disconnect.gif" />
+    <Content Include="Resources\disconnect.png" />
+    <Content Include="Resources\disconnecting.gif" />
+    <Content Include="Resources\icon_connecting.gif" />
+    <Content Include="Resources\icon_connection.png" />
+    <Content Include="Resources\icon_disconnect.png" />
+    <Content Include="Resources\roaming.png" />
+    <Content Include="Resources\search.png" />
+    <Content Include="Resources\sim.png" />
+    <Content Include="Resources\sim_detected.png" />
+    <Content Include="Resources\sim_not_inserted.png" />
+    <Content Include="Resources\sim_undetected.png" />
+    <Content Include="Resources\sms_full.gif" />
+    <Content Include="Resources\sms_unread.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
